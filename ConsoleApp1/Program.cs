@@ -199,6 +199,103 @@ class task {
         }
         Console.WriteLine("GCD: " + t);
     }
+
+    static void t11(int x, int y, char j)
+    {
+        switch (j)
+        {
+            case '+':
+                Console.WriteLine(x + y);
+                break;
+            case '-':
+                Console.WriteLine(x - y);
+                break;
+            case '*':
+                Console.WriteLine(x * y);
+                break;
+            case '/':
+                Console.WriteLine(x / y);
+                break;
+            case '%':
+                Console.WriteLine(x % y);
+                break;
+
+        }
+    }
+    
+    static void t12(int x)
+    {
+        int count = 0;
+        while (x > 10) count++;
+        count++;
+        Console.WriteLine("Total Digits: " + count);
+    }
+
+    static void t13(int x)
+    {
+
+        int j = 0;
+        int y = x;
+        while (y >= 10)
+        {
+            j += y % 10;
+
+            y /= 10;
+            j *= 10;
+        }
+        j += y;
+        if (x == y)
+        {
+            Console.WriteLine("Palindrome");
+
+        }
+        else
+        {
+            Console.WriteLine("Not Palindrome");
+        }
+
+    }
+
+    static void t14(int x)
+    {
+        int j = 0;
+        while (x >= 10)
+        {
+            j += x % 10;
+
+            x /= 10;
+        }
+        j += x;
+    }
+
+    static void t15(int x)
+    {
+        int j = 0;
+        int y = x;
+        int z = x;
+        int count = 0;
+        while (z >= 10)
+            z = z / 10;
+            count++;
+        count++;
+        while (y >= 10)
+        {
+            j += (y % 10)^count;
+
+            y /= 10;
+        }
+        j += y^count;
+        if (x == j)
+        {
+            Console.WriteLine("Armstrong");
+
+        }
+        else
+        {
+            Console.WriteLine("Not Armstrong");
+        }
+    }
+
 }
 
 
